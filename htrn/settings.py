@@ -109,6 +109,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'htrn.wsgi.application'
 
+# AUTH_USER_MODEL = 'accounts.User'
+# LOGIN_REDIRECT_URL = 'dashboard:index'
+
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -176,8 +179,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-if 'DATABASE_URL' in os.environ:
-    DATABASES = {'default': dj_database_url.config()}
+# if 'DATABASE_URL' in os.environ:
+#     DATABASES = {'default': dj_database_url.config()}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

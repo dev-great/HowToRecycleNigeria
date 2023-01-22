@@ -20,15 +20,17 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('account.urls', namespace='core')),
-    path('', include('agent.urls', namespace='core')),
-    path('', include('collectioncenter.urls', namespace='core')),
+    path('', include('account.urls')),
+    path('', include('agent.urls')),
+    path('', include('collectioncenter.urls')),
 ]
+
+handler404 = 'demo.view'
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     
-admin.site.site_header ="Koralcity control panel"
+admin.site.site_header ="How To Recycle Nigeria control panel"
 admin.site.index_title ="Administrators dashboard"
 admin.site.site_title ="Control panel"
