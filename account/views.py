@@ -7,11 +7,11 @@ from django.shortcuts import render,redirect
 
 # Create your views here.
 class Index(TemplateView):
-    template_name = 'index.html'
+    template_name = 'core/index.html'
     
 
 class BecomeAnAgent(CreateView):
-    template_name = 'become_an_agent.html'
+    template_name = 'agent/become_an_agent.html'
     model = BecomeAnAgent
     fields = ['name','phoneNumber','state','status','slug']
 
