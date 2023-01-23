@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title>Bizz - How To Recycle Nigeria.</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Calling Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+    <!-- Calling Favicon -->
+    <!-- ********************* -->
+    <!-- CSS files -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/meanmenu.css' %}" media="all">
+    <link rel="stylesheet" href="{% static 'css/default.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" class="color-changing" href="{% static 'css/color.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+  </head>
+  <body>
+      <!-- Preloader start -->
+      <div class="loader-page flex-center">
+        <img src="{% static 'img/loader.gif' %}" alt="">
+    </div>
+    <!-- Preloader end -->
+
+     <!-- Header area start -->
+    {% include "snippets/navbar.html" %}
+    <!-- Header area end -->
+
+    {% block content %}
+      
+    {% endblock content %}
+
+    <!-- Footer area start -->
+    {% include "snippets/footerbar.html" %}
+     <!-- Footer area end -->
+    <!-- ********************* -->
+    
+
+    <!-- JS Files -->
+    <script src="{% static 'js/modernizr-3.5.0.min.js' %}"></script>
+    <script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static '../../cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'js/lightslider.min.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/jquery.meanmenu.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <!-- JS Files end -->
+</body>
+
+</html>
