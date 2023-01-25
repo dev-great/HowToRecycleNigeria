@@ -13,7 +13,7 @@ class Index(TemplateView):
 class BecomeAnAgent(CreateView):
     template_name = 'agent/become_an_agent.html'
     model = BecomeAnAgent
-    fields = ['name','phoneNumber','state','status','slug']
+    fields = ['name','phoneNumber','state',]
 
 def error_404(request, exception):
     return render(request, '404.html')
