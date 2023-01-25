@@ -2,10 +2,10 @@ from django.db import models
 
 
 
-STATUS = (
-    (0,"Pending"),
-    (1,"Accepted"),
-    (2,"Closed")
+STATUS_CHOICE = (
+    ("0","Pending"),
+    ("1","Accepted"),
+    ("2","Closed"),
 )
 # Create your models here.
 class BecomeAnAgent(models.Model):
@@ -15,7 +15,7 @@ class BecomeAnAgent(models.Model):
     state = models.CharField(max_length=200)
     updated_on = models.DateTimeField(auto_now= True)
     created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=0)
+    status = models.CharField(max_length = 20, choices=STATUS_CHOICE, default=0)
 
     class Meta:
         ordering = ['-created_on']

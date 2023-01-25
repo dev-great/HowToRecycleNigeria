@@ -6,7 +6,7 @@
             <div class="col-lg-2 col-md-5 col-sm-4 col-5">
                 <div class="logo transition-4">
                     <a href="index-2.html">
-                        <img src="img/logo/logo.png" class="transition-4" alt="logo">
+                        <img src="{% static 'img/logo/logo.png' %}" class="transition-4" alt="logo">
                     </a>
                 </div>
             </div>
@@ -21,26 +21,26 @@
                 <div class="menu-links">
                     <nav class="main-menu black">
                         <ul>
-                            <li class="active"><a href="index.html">Home</a></li>
-                            <li><a href="about-us.html">About Us <i class="fas fa-angle-down"></i></a>
+                            <li class="active"><a href="{% url 'account:home_page' %}">Home</a></li>
+                            <li><a href="#">About Us <i class="fas fa-angle-down"></i></a>
                                 <ul class="submenu">
-                                    <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href="clients.html">Partners</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Partners</a></li>
                                 </ul>
                             </li>
-                            <li><a href="services.html">Service </a></li>
+                            <li><a href="#">Service </a></li>
                             <li> <a href="#">Recycle <i class="fas fa-angle-down"></i></a>
                                 <ul class="submenu">
-                                    <li><a href="contact-us.html">General information on recycling</a></li>
-                                    <li><a href="faq.html">Nearby recycling centres</a></li>
-                                    <li><a href="faq.html">How to recycle at home</a></li>
-                                    <li><a href="faq.html">Generate your recycle QR </a></li>
+                                    <li><a href="#">General information on recycling</a></li>
+                                    <li><a href="#">Nearby recycling centres</a></li>
+                                    <li><a href="#">How to recycle at home</a></li>
+                                    <li><a href="#">Generate your recycle QR </a></li>
                                 </ul>
                             </li>
                             <li> <a href="#">Contact Us <i class="fas fa-angle-down"></i></a>
                                 <ul class="submenu">
-                                    <li><a href="contact-us.html">Contact Us</a></li>
-                                    <li><a href="faq.html">Faq</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Faq</a></li>
                                 </ul>
                             </li>
                         </ul>
