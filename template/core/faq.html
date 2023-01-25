@@ -1,0 +1,225 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+    <!-- immer banner start -->
+    <section class="inner-banner pt-80 pb-95" style="background-image: url('../static/img/banner/inner-banner.jpg'); height: 20rem;" data-overlay="7">
+        <div class="container">
+            <div class="row z-5 align-items-center" style="padding: 5rem;">
+                <div class="col-md-8 text-center text-md-left">
+                    <h1 class="f-700 green white">FAQS</h1>
+                    <span class="green-line bg-green d-none d-md-inline-block"></span>
+                </div>
+                <div class="col-md-4 text-center text-md-right">
+                    <nav aria-label="breadcrumb" class="banner-breadcump">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="{% url 'account:home_page' %}"><i class="fas fa-home fs-12 mr-5"></i>Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">FAQS </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- blog details area start -->
+    <section class="service-details pt-100 pb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-7">
+                    <div class="faq-outer">
+                        <!-- faq grou 1 -->
+                        <h4 class="line-right green f-700 fs-24">FAQs</h4>
+                        <div class="faq-box bodered-faq mt-15 mb-50">
+                            <div id="accordion1">
+                                <div class="card">
+                                    <div class="card-header" id="heading1" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1" role="button">
+                                        <h5 class="mb-0">
+                                            What does this app exactly do?
+                      </h5>
+                                    </div>
+
+                                    <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion1">
+                                        <div class="card-body">
+                                            Our platform offers a variety of features to help you learn about recycling, including
+
+                                            <br> <br>A section that explains how to recycle at home - Our easy-to-understand guide will teach you how to separate your waste into different categories and properly dispose of them.
+                                            
+                                            <br> <br>A section that shows nearby recycling centres - Our interactive map will help you find the nearest recycling centres in your area, complete with contact information.
+                                            
+                                            <br>  <br>A section that explains general information on recycling - Learn about the benefits of recycling, the recycling process and the different types of materials that can be recycled.
+                                            
+                                            <br> <br>A section on how to become an agent - Our guide will provide information on how to become an agent and help you understand the role of agents in the recycling process.
+                                            
+                                             </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header  collapsed" id="heading2" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2" role="button">
+                                        <h5 class="mb-0">
+                                            How can I add my organisation as a location on your Recycling Locator?
+                      </h5>
+                                    </div>
+                                    <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordion1">
+                                        <div class="card-body">
+                                            We are able to accept applications from other organisations that have recycling or reuse locations available that are open to the public. For more details, please email 
+                                            info@howtorecycle.ng 
+                                             </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header collapsed" id="heading3" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3" role="button">
+                                        <h5 class="mb-0">
+                                            How can I find out how to recycle a specific item?
+                      </h5>
+                                    </div>
+                                    <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordion1">
+                                        <div class="card-body">
+                                            Navigate: Home → Recycle at home → select the item you have.
+
+                                          <br><br>  Our Recycle at home page covers a lot of items and gives details on whether you can recycle them at home or at out-of-home drop-off points.
+                                             </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header collapsed" id="heading3" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3" role="button">
+                                        <h5 class="mb-0">
+                                            The information about a recycling bank or Recycling Centre on the Recycling Locator is incorrect, how can I report this?
+                      </h5>
+                                    </div>
+                                    <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordion1">
+                                        <div class="card-body">
+                                       
+Please send us a mail at: info@howtorecycle.ng 
+</div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header collapsed" id="heading3" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3" role="button">
+                                        <h5 class="mb-0">
+                                            How do we install your QR on our product?
+                      </h5>
+                                    </div>
+                                    <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordion1">
+                                        <div class="card-body">
+                                            On our home page → we have the option to download our QR code → you can just download the QR from here and place them on your products. 
+
+                                            For more info: contact → info@howtorecyle.ng  </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header collapsed" id="heading4" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4" role="button">
+                                        <h5 class="mb-0">
+                                            How do I recycle a bulky item I cannot transport?
+                      </h5>
+                                    </div>
+                                    <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordion1">
+                                        <div class="card-body">
+                                            Check with your local authority - they should be able to arrange a bulky waste collection for you. 
+
+                                            Contact us @ info@howtorecycle.ng, we’ll help you out with this. </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header collapsed" id="heading4" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4" role="button">
+                                        <h5 class="mb-0">
+                                            Can I schedule a pick-up on the app?
+                      </h5>
+                                    </div>
+                                    <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordion1">
+                                        <div class="card-body">
+                                            Currently, you can contact the nearest recycling centre to inquire about scheduling a pickup. We are actively developing a feature within our app that will allow you to schedule pickups directly.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- faq grou1 end -->
+
+                    </div>
+                </div>
+                <!-- right-part -->
+                <div class="col-xl-4 col-lg-5">
+
+                    <div class="right-box bg-light-white mb-30">
+                        <div class="right-box-head">
+                            <h4>Need Help?</h4>
+                        </div>
+                        <div class="right-box-content">
+                            <ul class="mt-10 mb-10">
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="icon-round-box">
+                                            <div class="icon-round-box-icon">
+                                                <i class="fas fa-phone-volume green"></i>
+                                            </div>
+                                        </div>
+                                        <div class="icon-round-box-text">
+                                            <p><span>Phone:</span> (+234) 000-000-0000</p>
+                                            <p><span>Mob:</span> (+234) 000-000-0000</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="icon-round-box">
+                                            <div class="icon-round-box-icon">
+                                                <i class="far fa-envelope green"></i>
+                                            </div>
+                                        </div>
+                                        <div class="icon-round-box-text">
+                                            <p>info@howtorecycle.ng </p>
+                                            <p>suspport@howtorecycle.ng </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="icon-round-box">
+                                            <div class="icon-round-box-icon">
+                                                <i class="fas fa-map-marker-alt green"></i>
+                                            </div>
+                                        </div>
+                                        <div class="icon-round-box-text">
+                                            <p>Companies Address</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="right-box bg-light-white mb-30">
+                        <div class="right-box-head">
+                            <h4>Follow Us</h4>
+                        </div>
+                        <div class="right-box-content">
+                            <div class="social-profile mt-10 mb-10">
+                                <a href="#" class="social-profile-box">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-profile-box">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-profile-box">
+                                    <i class="fab fa-google-plus-g"></i>
+                                </a>
+                                <a href="#" class="social-profile-box">
+                                    <i class="fab fa-google-plus-g"></i>
+                                </a>
+                                <a href="#" class="social-profile-box">
+                                    <i class="fab fa-pinterest-p"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog details area end -->
+
+{% endblock content %}

@@ -1,12 +1,8 @@
 from django.contrib import admin
 from .models import *
-# Register your models here.
 
-
-class BecomeAnAgentAdmin(admin.ModelAdmin):
-    list_display = ('name','phoneNumber','state','status',)
-    list_filter = ('state','status',)
-    search_fields = ['name','phoneNumber','state','status',]
-    prepopulated_fields = {'slug': ('name',)}
+class ServiceAdmin(admin.ModelAdmin):
+    list_display = ('name','details',)
+    search_fields = ['name','details',]
     
-admin.site.register(BecomeAnAgent, BecomeAnAgentAdmin)
+admin.site.register(ServiceModel, ServiceAdmin)

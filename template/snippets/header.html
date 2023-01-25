@@ -24,23 +24,23 @@
                             <li class="active"><a href="{% url 'account:home_page' %}">Home</a></li>
                             <li><a href="#">About Us <i class="fas fa-angle-down"></i></a>
                                 <ul class="submenu">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Partners</a></li>
+                                    <li><a href="{% url 'account:about' %}">About Us</a></li>
+                                    <li><a href="{% url 'account:blog' %}">Blog</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Service </a></li>
+                            <li><a href="{% url 'account:services' %}">Service </a></li>
                             <li> <a href="#">Recycle <i class="fas fa-angle-down"></i></a>
                                 <ul class="submenu">
-                                    <li><a href="#">General information on recycling</a></li>
-                                    <li><a href="#">Nearby recycling centres</a></li>
-                                    <li><a href="#">How to recycle at home</a></li>
+                                    <li><a href="{% url 'account:general_information_on_recycling' %}">General information on recycling</a></li>
+                                    <li><a href="{% url 'account:nearby_recycling_centres' %}">Nearby recycling centres</a></li>
+                                    <li><a href="{% url 'account:how_to_recycle_at_home' %}">How to recycle at home</a></li>
                                     <li><a href="#">Generate your recycle QR </a></li>
                                 </ul>
                             </li>
                             <li> <a href="#">Contact Us <i class="fas fa-angle-down"></i></a>
                                 <ul class="submenu">
-                                    <li><a href="#">Contact Us</a></li>
-                                    <li><a href="#">Faq</a></li>
+                                    <li><a href="{% url 'account:contact' %}">Contact Us</a></li>
+                                    <li><a href="{% url 'account:faq' %}">Faq</a></li>
                                 </ul>
                             </li>
                         </ul>
