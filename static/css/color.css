@@ -51,7 +51,7 @@ p,
 .social-icons.black li a,
 .categories li a,
 .btn-filter {
-    color: #282f41;
+    color: #156433;
 }
 
 
@@ -60,7 +60,7 @@ p,
 .......................................*/
 
 .quote-right-light {
-    color: #e9f1f9;
+    color: #eef8f1;
 }
 
 
@@ -83,7 +83,7 @@ a:hover,
 .mobile-menu-3 a.meanmenu-reveal,
 .week-count h1 sup,
 .experience li span {
-    color: #001c6b;
+    color: #031309;
 }
 
 
@@ -94,7 +94,6 @@ a:hover,
 a,
 button,
 .green,
-.line-head,
 .count-box h3,
 .feature-num span,
 .plus-btn:hover,
@@ -122,10 +121,21 @@ button,
 .week-count h1,
 .case-quote a,
 .sub-2:after {
-    color: #09bc8a;
+    color: #156433,
 }
 
 
+.line-head{
+    color: #14f52b;
+}
+
+.contact-options li{
+    color: #eef8f1;
+}
+
+.social-links li a {
+    color: #031309;
+}
 /* ....................................
 5. bg black
 .......................................*/
@@ -165,7 +175,7 @@ button,
 .how-it-works[data-overlay]::before,
 .price-tag,
 .input-white + .input-group-append .btn:hover {
-    background: #131c26;
+    background: #156433;
 }
 
 
@@ -231,7 +241,6 @@ button,
 .arrow-navigation .nav-slide,
 .btn-round-blue:hover,
 .price-each.active,
-.price-tabs .nav-link.active,
 .testimonial-slider .arrow-btn:hover,
 .btn-square-green,
 .btn-square-white:hover,
@@ -267,9 +276,13 @@ button,
 .portfolio-overlay:before,
 .line-right:after,
 .experience li:after {
-    background: #09bc8a;
+    background: #156433,
 }
 
+
+.price-tabs.nav-link.active {
+    background-color: #156433;
+}
 
 /*green bg opacity classes*/
 
@@ -329,17 +342,25 @@ button,
 .thanks[data-overlay]::before,
 .experience li:before,
 .service-icon-2 {
-    background: #e9f1f9;
+    background: #eef8f1;
 }
 
 
 /*important*/
 
 .light-white {
-    background: #e9f1f9 !important;
+    background: #eef8f1 !important;
 }
 
-
+.scroll-btn{
+    background-color: #156433;
+}
+.links-list li a{
+    color: #031309;
+}
+.links-list li a:hover{
+    color: #14f52b;
+}
 /* ....................................
 9. box shadow green
 .......................................*/
@@ -408,7 +429,7 @@ button,
 .icon-box-icon,
 .partner:hover .partner-logo,
 .thank-icon {
-    border-color: #09bc8a;
+    border-color: #156433,
 }
 
 
@@ -448,14 +469,14 @@ button,
 .each-blog-standared .blog-list-content,
 .partner-logo,
 .main-menu li .submenu .submenu li a {
-    border-color: #e9f1f9;
+    border-color: #eef8f1;
 }
 
 
 /*border topcolor*/
 
 .partner-logo:after {
-    border-top-color: #e9f1f9;
+    border-top-color: #eef8f1;
 }
 
 
@@ -475,17 +496,17 @@ button,
 .blackbg-1,
 .footer-area,
 .social-links li a {
-    background-color: #16202b;
+    background-color: #eef8f1;
 }
 
 .blackbg-2,
 .contact-area,
 .mean-container .mean-nav {
-    background-color: #1c2733;
+    background-color: #156433;
 }
 
 .copyright {
-    background-color: #131c26;
+    background-color: #031309;
 }
 
 

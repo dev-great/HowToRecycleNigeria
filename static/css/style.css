@@ -327,10 +327,11 @@ label {
     color: #fff;
     letter-spacing: .4px;
     box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    background-color: #156433;
 }
 
 .btn-round:hover {
-    color: #09bc8a;
+    color: #14f52b;
 }
 
 .btn-round-blue {
@@ -354,7 +355,7 @@ label {
     line-height: 1;
     font-size: 14px;
     font-weight: 600;
-    color: #fff;
+    color: #14f52b;
     text-transform: uppercase;
     letter-spacing: 2px;
     border-radius: 0;
@@ -492,19 +493,32 @@ label {
 /*****header type 1*****/
 
 .transperant-head {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     right: 0;
     z-index: 300;
-    border-bottom: 1px solid #09bc8a;
-    height: 116px;
+    border-bottom: 1px solid #156433;
+    height: 100px;
     width: 100%;
-    background-color: #09bc8a;
+    background-color: #fff;
+}
+
+.transperant-head.fixed-nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 300;
+    border-bottom: 1px solid #156433;
+    height: 100px;
+    width: 100%;
 }
 
 .logo img {
-    max-width: 141px;
+    max-width: 101px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .menu-links,
@@ -552,14 +566,19 @@ label {
     font-weight: 500;
     display: inline-block;
     padding: 44px 0px;
-    color: #fff;
+   
+    color: #000;
+}
+.main-menu li a:hover {
+   
+    color: #14f52b;
 }
 
 .main-menu li a i {
     font-size: 10px;
 }
 
-.main-menu li:after {
+.main-menu li a:after {
     position: absolute;
     content: close-quote;
     bottom: -3px;
@@ -567,6 +586,10 @@ label {
     left: 0;
     right: 0;
     width: 0;
+    color: #14f52b;
+}
+.active li a{
+    color: #14f52b;
 }
 
 .main-menu li:hover:after,
@@ -599,6 +622,9 @@ label {
     font-weight: 500;
     text-transform: initial;
     letter-spacing: .8px;
+}
+.main-menu li .submenu li a:hover {
+    color: #14f52b;
 }
 
 .sub-2 {
@@ -654,11 +680,11 @@ label {
     position: relative;
     font-size: 17px;
     margin-right: 28px;
-    color: #fff;
+    color: #000;
 }
 
 .search-icon:hover {
-    color: #fff;
+    color: #14f52b;
 }
 
 .search-popup .modal-content {
@@ -718,17 +744,20 @@ label {
 /*mobile menu*/
 
 .mean-container a.meanmenu-reveal {
-    margin-top: -80px;
-    right: 0;
+    margin-right: 2rem;
+    padding-right: 1rem;
+    color: #000;
+    background-color: #444;
 }
 
 .mean-container .mean-bar {
     padding: 0px 0;
     min-height: 0;
+    background-color: #444;
 }
 
 .mean-container .mean-nav {
-    margin-top: 0px;
+    margin-top: -2rem;
 }
 
 .mean-container a.meanmenu-reveal {
@@ -914,7 +943,7 @@ section.top-header {
     opacity: .5;
     -webkit-transition: all .4s;
     transition: all .4s;
-    color: #fff;
+    color: #156433;
 }
 
 .slide-div .owl-nav button:hover i {
@@ -1150,6 +1179,10 @@ section.top-header {
 .about-text {
     padding: 0px 35px;
 }
+.about-text p{
+    text-align: justify;
+}
+
 
 .fancy-head h1 {
     font-weight: bold;
@@ -1246,7 +1279,7 @@ p.big-p {
 
 .service-box:hover .service-text h4,
 .service-box:hover .service-text p {
-    color: #fff;
+    color: #156433;
 }
 
 .service-box:hover .service-icon-bg {
@@ -1777,6 +1810,7 @@ p.big-p {
 .price-tabs .nav-link.active {
     padding: 11px 30px;
     box-shadow: 0px 13px 20px -8px rgba(0, 0, 0, 0.15);
+    background-color: #156433;
 }
 
 
@@ -2266,13 +2300,15 @@ p.big-p {
     height: 50px;
     width: 50px;
     color: #fff;
-    border-radius: 50%;
+    border-radius: 0.5rem;
     position: fixed;
     right: 80px;
     bottom: 51px;
 }
 
-
+.feature-list-area img{
+    object-fit: cover;
+}
 /* ....................................
 18. About page
 .......................................*/
