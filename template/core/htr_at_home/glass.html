@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+    <!-- immer banner start -->
+    <section class="inner-banner pt-80 pb-95" style="background-image: url('../static/img/banner/inner-banner.jpg'); height: 20rem;" data-overlay="7">
+        <div class="container">
+            <div class="row z-5 align-items-center" style="padding: 5rem;">
+                <div class="col-md-8 text-center text-md-left">
+                    <h1 class="f-700 green white">Glass</h1>
+                    <span class="green-line bg-green d-none d-md-inline-block"></span>
+                </div>
+                <div class="col-md-4 text-center text-md-right">
+                    <nav aria-label="breadcrumb" class="banner-breadcump">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="{% url 'account:home_page' %}"><i class="fas fa-home fs-12 mr-5"></i>Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">How to recycle...</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Terms & Conndition -->
+
+    <section class="terms pt-95 pb-75">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-10 offset-lg-1">
+                  
+                                    <h5 class="f-700 mb-10">
+                                        Glass: Which glass items can be recycled?
+                                    </h5>
+                                        <ul class="check-list-2 mb-15">
+                                            <li>Bottles of any colour, e.g. wine, beer, spirits</li>
+                                            <li>Jars, e.g. sauces, jam, baby food</li>
+                                            <li>Non-food bottles, e.g. perfume, aftershave, face creams</li>
+                                        </ul>
+                                        <h5 class="f-700 mb-10">
+                                            Glass: Which glass items can't be recycled?
+            
+                                        </h5>
+                                        <ul class="check-list-2 mb-15">
+                                            <li>Ceramics, e.g. crockery, earthenware</li>
+                                            <li>Drinking glasses</li>
+                                            <li>Glass cookware, e.g. Pyrex, microwave plates</li>
+                                            <li>Light bulbs and tubes</li>
+                                            <li>Vases</li>
+                                        </ul>
+                                        <h5 class="f-700 mb-10">
+                                            Glass: How to recycle glass
+            
+                                        </h5>
+                                        <ul class="check-list-2 mb-15">
+                                            <li>Empty and give a quick rinse - leftover liquid can contaminate other recyclables which may mean they aren't recycled.</li>
+                                            <li>Put lids and caps back on - this reduces the chance of them getting lost during the sorting process as they can be recycled separately.                                            </li>
+                                            <li>Corks should be removed from bottles before they are recycled but can be home composted.</li>
+                                            <li>At bottle banks, blue glass goes in with green glass.</li>
+                                            <li>Don't put glass milk bottles into a bottle bank or in your glass recycling. If your milk is delivered in glass bottles you should always return them to your milkman.</li>
+                                        </ul>
+                 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms & Conndition -->
+
+
+
+{% endblock content %}

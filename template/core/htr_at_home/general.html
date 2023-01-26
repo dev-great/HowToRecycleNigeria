@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+    <!-- immer banner start -->
+    <section class="inner-banner pt-80 pb-95" style="background-image: url('../static/img/banner/inner-banner.jpg'); height: 20rem;" data-overlay="7">
+        <div class="container">
+            <div class="row z-5 align-items-center" style="padding: 5rem;">
+                <div class="col-md-8 text-center text-md-left">
+                    <h1 class="f-700 green white">General</h1>
+                    <span class="green-line bg-green d-none d-md-inline-block"></span>
+                </div>
+                <div class="col-md-4 text-center text-md-right">
+                    <nav aria-label="breadcrumb" class="banner-breadcump">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="{% url 'account:home_page' %}"><i class="fas fa-home fs-12 mr-5"></i>Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">How to recycle...</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Terms & Conndition -->
+
+    <section class="terms pt-95 pb-75">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-10 offset-lg-1">
+                    <h5 class="f-700 mb-10">
+                        General (how to recycle at home):
+                        </h5>
+                        <ul class="check-list-2 mb-15">
+                            <li>Collect your recyclable materials in a designated bin or receptables. This can be anything
+                                from cardboard boxes and paper to plastic bottles and aluminium cans.
+                                </li>
+                            <li>Sort your recyclables into the correct categories based on material type. This will help the
+                                recycling process go more smoothly and ensure that the materials are recycled properly.
+                                </li>
+                            <li>Rinse and clean your recyclables before putting them in the bin. This will help reduce
+                                contamination and make sure the materials are recycled correctly.
+                                </li>
+                            <li>Make sure to recycle every type of recyclable material separately. This includes paper,
+                                plastic, metal, flexibles, used beverage cartons and glass.
+                                </li>
+                            <li>Try to avoid creating excess waste in the first place. This will help reduce the number of
+                                recyclable materials that need to be processed.
+                                </li>
+                        </ul>
+                       
+                 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms & Conndition -->
+
+
+
+{% endblock content %}

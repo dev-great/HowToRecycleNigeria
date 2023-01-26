@@ -5,7 +5,7 @@
         <div class="row align-items-center">
             <div class="col-lg-2 col-md-5 col-sm-4 col-5">
                 <div class="logo transition-4">
-                    <a href="index-2.html">
+                    <a href="{% url 'account:home_page' %}">
                         <img src="{% static 'img/logo/logo.png' %}" class="transition-4" alt="logo">
                     </a>
                 </div>
@@ -28,13 +28,21 @@
                                     <li><a href="{% url 'account:blog' %}">Blog</a></li>
                                 </ul>
                             </li>
-                            <li><a href="{% url 'account:services' %}">Service </a></li>
                             <li> <a href="#">Recycle <i class="fas fa-angle-down"></i></a>
                                 <ul class="submenu">
                                     <li><a href="{% url 'account:general_information_on_recycling' %}">General information on recycling</a></li>
                                     <li><a href="{% url 'account:nearby_recycling_centres' %}">Nearby recycling centres</a></li>
-                                    <li><a href="{% url 'account:how_to_recycle_at_home' %}">How to recycle at home</a></li>
-                                    <li><a href="{% url 'account:download_qr' %}">Generate your recycle QR </a></li>
+                                    <li>
+                                        <a class="sub-2">How to recycle at home</a>
+                                        <ul class="submenu">
+                                            <li><a href="{% url 'account:general' %}"">General </a></li>
+                                            <li><a href="{% url 'account:plastic' %}">Plastic bottles</a></li>
+                                            <li><a href="{% url 'account:aluminium' %}">Aluminium foil</a></li>
+                                            <li><a href="{% url 'account:paper' %}">Paper</a></li>
+                                            <li><a href="{% url 'account:glass' %}">Glass</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{% url 'account:download_qr' %}">Get recycle QR </a></li>
                                 </ul>
                             </li>
                             <li> <a href="#">Contact Us <i class="fas fa-angle-down"></i></a>

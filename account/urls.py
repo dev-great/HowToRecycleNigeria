@@ -12,7 +12,6 @@ urlpatterns = [
     path('general_information_on_recycling/', GeneralInformationOnRecycling.as_view(), name="general_information_on_recycling"),
     path('services/<pk>/', ServiceDetail.as_view(), name="service_detail"),
     path('Services/', Services.as_view(), name="services" ),
-    path('how_to_recycle_at_home/', HowToRecycleAtHome.as_view(), name="how_to_recycle_at_home" ),
     path('about_us/', AboutUs.as_view(), name="about" ),
     path('blog/', Blog.as_view(), name="blog" ),
     path('blog/<pk>/', BlogDetail.as_view(), name="blog_detail" ),
@@ -22,4 +21,9 @@ urlpatterns = [
     path('contact/', Contact.as_view(), name="contact" ),
     path('thankyou/', ThankYou.as_view(), name="thankyou" ),
     path('search_result/', NearbyRecyclingCentresSearch.as_view(), name="search_result" ),
+    path('how_to_recycle_at_home/general/', General.as_view(), name="general" ),
+    path('how_to_recycle_at_home/aluminium/', Aluminium.as_view(), name="aluminium" ),
+    path('how_to_recycle_at_home/plastic/', Plastic.as_view(), name="plastic" ),
+    path('how_to_recycle_at_home/paper/', Paper.as_view(), name="paper" ),
+    path('how_to_recycle_at_home/glass/', Glass.as_view(), name="glass" ),
 ]

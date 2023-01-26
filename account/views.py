@@ -45,8 +45,20 @@ class GeneralInformationOnRecycling(TemplateView):
     template_name = 'core/general_information_on_recycling.html'
     
 
-class HowToRecycleAtHome(TemplateView):
-    template_name = 'core/how_to_recycle_at_home.html'
+class General(TemplateView):
+    template_name = 'core/htr_at_home/general.html'
+class Aluminium(TemplateView):
+    template_name = 'core/htr_at_home/aluminium.html'
+
+class Paper(TemplateView):
+    template_name = 'core/htr_at_home/paper.html'
+
+class Plastic(TemplateView):
+    template_name = 'core/htr_at_home/plastic.html'
+
+class Glass(TemplateView):
+    template_name = 'core/htr_at_home/glass.html'
+
 
 
 class AboutUs(TemplateView):

@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+    <!-- immer banner start -->
+    <section class="inner-banner pt-80 pb-95" style="background-image: url('../static/img/banner/inner-banner.jpg'); height: 20rem;" data-overlay="7">
+        <div class="container">
+            <div class="row z-5 align-items-center" style="padding: 5rem;">
+                <div class="col-md-8 text-center text-md-left">
+                    <h1 class="f-700 green white">Plastic</h1>
+                    <span class="green-line bg-green d-none d-md-inline-block"></span>
+                </div>
+                <div class="col-md-4 text-center text-md-right">
+                    <nav aria-label="breadcrumb" class="banner-breadcump">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="{% url 'account:home_page' %}"><i class="fas fa-home fs-12 mr-5"></i>Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">How to recycle...</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Terms & Conndition -->
+
+    <section class="terms pt-95 pb-75">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-10 offset-lg-1">
+                   
+                        <h5 class="f-700 mb-10">
+                            Plastic bottles: Which plastic bottles can be recycled?
+                        </h5>
+                            <ul class="check-list-2 mb-15">
+                                <li>All clear and coloured plastic bottles from around the home</li>
+                                <li>Cleaning product bottles, e.g. bathroom cleaners and bleach, with any triggers left on</li>
+                                <li>Detergent and soap bottles, minus the pump</li>
+                                <li>Fizzy and non-fizzy drinks and water bottles</li>
+                                <li>Shampoo, shower gel and skin care product bottles</li>
+                                <li>Milk bottles</li>
+                                <li>Ready-to-use plant food and pesticides bottles - check the label</li>
+                            </ul>
+                            <h5 class="f-700 mb-10">
+                                Plastic bottles: Which plastic bottles can't be recycled?
+
+                            </h5>
+                            <ul class="check-list-2 mb-15">
+                                <li>Plastic bottles containing chemicals, e.g. anti-freeze</li>
+                            </ul>
+                            <h5 class="f-700 mb-10">
+                                How to recycle plastic bottles
+                            </h5>
+                            <ul class="check-list-2 mb-15">
+                                <li>Empty and rinse bottles. Leftover foods or liquids can contaminate other recyclables and if bottles contain liquid they may not be recycled as deemed too heavy by the automated sorting process. Liquid can also damage the machinery.
+                                </li>
+                                <li>Cleaning product bottles, e.g. bathroom cleaners and bleach, with any triggers left on</li>
+                                <li>Leave on labels - these will be removed in the process.  </li>
+                                <li>Squash bottles to save space.</li>
+                                <li>Replace lids and tops. If they stay in the container they will get recycled.</li>
+                                <li>Milk bottles</li>
+                                <li>If the lid is already attached, leave attached as this will ensure the lid is recycled along with the bottle.
+                                </li>
+                            </ul>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms & Conndition -->
+
+
+
+{% endblock content %}
