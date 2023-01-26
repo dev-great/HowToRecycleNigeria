@@ -17,5 +17,6 @@ urlpatterns = [
     path('blog/<pk>/', BlogDetail.as_view(), name="blog_detail" ),
     path('nearby_recycling_centres/', NearbyRecyclingCentres.as_view(), name="nearby_recycling_centres" ),
     path('nearby_recycling_centres/<pk>/', NearbyRecyclingCentresDetail.as_view(), name="nearby_recycling_centres_detail" ),
+    path('nearby_recycling_centres_create/', NearbyRecyclingCentresCreate.as_view(), name="nearby_recycling_centres_create" ),
     path('contact/', Contact.as_view(), name="contact" ),
 ]

@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+    <!-- immer banner start -->
+    <section class="inner-banner pt-80 pb-95" style="background-image: url('../static/img/banner/inner-banner.jpg'); height: 20rem;" data-overlay="7">
+        <div class="container">
+            <div class="row z-5 align-items-center" style="padding: 5rem;">
+                <div class="col-md-8 text-center text-md-left">
+                    <h1 class="f-700 green white">Register Collection Center</h1>
+                    <span class="green-line bg-green d-none d-md-inline-block"></span>
+                </div>
+                <div class="col-md-4 text-center text-md-right">
+                    <nav aria-label="breadcrumb" class="banner-breadcump">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="{% url 'account:home_page' %}"><i class="fas fa-home fs-12 mr-5"></i>Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Register Collection...</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="login pt-100 pb-100">
+        <div class="container">
+        <div class="formbold-main-wrappe" ">
+            
+            <div class="formbold-form-wrapper">
+
+                <h2 class="f-700 mb-15">Register Collection Center</h2>
+                <p>Fill out the form, and a follow-up message will be forwarded to you within two working days.</p>
+              <form action="https://formbold.com/s/FORM_ID" method="POST">
+                <div class="formbold-mb-5">
+                  <div class="form-group relative mb-25 mb-sm-20">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Full Name Of The Company"
+                    class="form-control input-lg input-white shadow-5"
+                  />
+                </div>
+                <div class="formbold-mb-5">
+                  <div class="form-group relative mb-25 mb-sm-20">
+                  <input
+                    type="number"
+                    name="phone"
+                    id="phone"
+                    placeholder="Enter your phone number"
+                    class="form-control input-lg input-white shadow-5"
+                  />
+                  </div>
+                </div>
+                <div class="formbold-mb-5">
+                  <div class="form-group relative mb-25 mb-sm-20">
+                    <input
+                      type="number"
+                      name="whatsapp_phone"
+                      id="whatsapp_phone"
+                      placeholder="Enter your WhatsApp number"
+                      class="form-control input-lg input-white shadow-5"
+                    />
+                    </div>
+                  </div>
+                  <div class="formbold-mb-5">
+                    <div class="form-group relative mb-25 mb-sm-20">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    class="form-control input-lg input-white shadow-5"
+                  />
+                  </div>
+                </div>
+                <div class="formbold-mb-5">
+                  <div class="form-group relative mb-25 mb-sm-20">
+                    <input
+                      type="text"
+                      name="map_link"
+                      id="map_link"
+                      placeholder="Enter your Google maps link"
+                      class="form-control input-lg input-white shadow-5"
+                    />
+                    </div>
+                  </div>
+                <div class="flex flex-wrap formbold--mx-3">
+                    <div class="w-full sm:w-half formbold-px-3">
+                        <div class="formbold-mb-5">
+                          <div class="form-group relative mb-25 mb-sm-20">
+                          <input
+                            type="time"
+                            name="time"
+                            id="time"
+                            class="form-control input-lg input-white shadow-5"
+                          />
+                          </div>
+                        </div>
+                      </div>
+                  <div class="w-full sm:w-half formbold-px-3">
+                    <div class="formbold-mb-5">
+                      <div class="form-group relative mb-25 mb-sm-20">
+                      <input
+                        type="time"
+                        name="time"
+                        id="time"
+                        class="form-control input-lg input-white shadow-5"
+                      />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="formbold-mb-5">
+                    <div class="form-group relative mb-25 mb-sm-20">
+                    <div class="formbold-mb-5">
+                        <input
+                          type="text"
+                          name="name"
+                          id="name"
+                          placeholder="Enter Full Company Address"
+                          class="form-control input-lg input-white shadow-5"
+                        />
+                        </div>
+                      </div>
+                      <div class="flex flex-wrap formbold--mx-3">
+                    <div class="w-full sm:w-half formbold-px-3">
+                        <div class="formbold-mb-5">
+                          <div class="form-group relative mb-25 mb-sm-20">
+                        <input
+                          type="text"
+                          name="state"
+                          id="state"
+                          placeholder="Enter state"
+                          class="form-control input-lg input-white shadow-5"
+                        />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-full sm:w-half formbold-px-3">
+                        <div class="formbold-mb-5">
+                          <div class="form-group relative mb-25 mb-sm-20">
+                        <input
+                          type="text"
+                          name="city_code"
+                          id="city_code"
+                          placeholder="Enter City"
+                          class="form-control input-lg input-white shadow-5"
+                        />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          
+                <div>
+                  <button class="formbold-btn">Submit Application</button>
+                </div>
+              </form>
+            </div>
+            </div>
+          </div>
+            </section>
+
+<!-- Client logos area start -->
+<section class="client-list bg-light-white pt-100 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3 text-center">
+                <div class="how-it-content z-5 mt-5">
+                    <h1 class=" f-700 mt-35 wow fadeInDown">Become an agent today!</h1>
+                    <p class=" mt-10 mb-40 wow fadeInDown">Register to become an agent today and help recycle Nigeria. Fill the form to get started with the application process.</p>
+                    <a href="{% url 'account:become_an_agent' %}" class="btn btn-round blob-small mb-55 wow fadeInUp">REGISTER NOW!<i class="fas fa-long-arrow-alt-right ml-20"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Client logos area end -->
+{% endblock content %}

@@ -49,7 +49,7 @@ class NearbyRecyclingCentresDetail(DetailView):
     model = CollectionCenterModel
     template_name = 'collection/nearby_recycling_centres_detail.html' 
 
-class NearbyRecyclingCentresDetail(CreateView):
+class NearbyRecyclingCentresCreate(CreateView):
     model = CollectionCenterModel
     fields = ['name','number','whats_app','state','google_map_link','full_address','opening_time','closing_time','pricing',]
     template_name = 'collection/nearby_recycling_centres_create.html' 

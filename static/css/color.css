@@ -145,7 +145,7 @@ button,
 .slider-control.type-3 .dots-slider .owl-dot,
 .team-detail-3[data-overlay]::before,
 .inner-banner[data-overlay]::before {
-    background: #282f41;
+    background: #156433;
 }
 
 
@@ -186,39 +186,39 @@ button,
 }
 
 .bg-blue-op-9 {
-    background: rgba(0, 28, 107, 0.9);
+    background: rgba(0, 107, 64, 0.9);
 }
 
 .bg-blue-op-8 {
-    background: rgba(0, 28, 107, 0.8);
+    background: rgba(0, 107, 55, 0.8);
 }
 
 .bg-blue-op-7 {
-    background: rgba(0, 28, 107, 0.7);
+    background: rgba(0, 107, 55, 0.7);
 }
 
 .bg-blue-op-6 {
-    background: rgba(0, 28, 107, 0.6);
+    background: rgba(0, 107, 52, 0.6);
 }
 
 .bg-blue-op-5 {
-    background: rgba(0, 28, 107, 0.5);
+    background: rgba(0, 107, 48, 0.5);
 }
 
 .bg-blue-op-4 {
-    background: rgba(0, 28, 107, 0.4);
+    background: rgba(0, 107, 50, 0.4);
 }
 
 .bg-blue-op-3 {
-    background: rgba(0, 28, 107, 0.3);
+    background: rgba(0, 107, 77, 0.3);
 }
 
 .bg-blue-op-2 {
-    background: rgba(0, 28, 107, 0.2);
+    background: rgba(0, 107, 37, 0.2);
 }
 
 .bg-blue-op-1 {
-    background: rgba(0, 28, 107, 0.1);
+    background: rgba(0, 107, 52, 0.1);
 }
 
 
@@ -401,7 +401,7 @@ button,
 .price-head .price-icon:before,
 .btn-border-blue,
 .blog-3-each:hover {
-    border-color: #001c6b;
+    border-color: #156433;
 }
 
 

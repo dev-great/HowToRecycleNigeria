@@ -45,7 +45,7 @@ class CollectionCenterModel(models.Model):
     full_address = models.TextField()
     opening_time = models.CharField(max_length=15)
     closing_time = models.CharField(max_length=15)
-    pricing = models.ForeignKey(PricesModel, on_delete=models.CASCADE, )
+    pricing = models.ManyToManyField(PricesModel)
     updated_on = models.DateTimeField(auto_now= True)
     created_on = models.DateTimeField(auto_now_add=True)
 
@@ -60,4 +60,24 @@ class BlogModel(models.Model):
     title= models.CharField(max_length=200)
     image = models.ImageField(upload_to='images/')
     content= models.TextField()
-    pub_date = models.DateTimeField('date published')
+    created_on = models.DateTimeField(auto_now_add=True)
+    
+    
+    class Meta:
+        ordering = ['-created_on']
+
+    def __str__(self):
+        return self.title
+    
+    
+class NewslettersModel(models.Model):
+    name = models.CharField(max_length=400)
+    email = models.EmailField(unique=True)
+    created_on = models.DateTimeField(auto_now_add=True)
+    
+    
+    class Meta:
+        ordering = ['-created_on']
+
+    def __str__(self):
+        return self.name
