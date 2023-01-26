@@ -71,8 +71,21 @@ class BlogModel(models.Model):
     
     
 class NewslettersModel(models.Model):
-    name = models.CharField(max_length=400)
+    name = models.CharField(max_length=400) 
     email = models.EmailField(unique=True)
+    created_on = models.DateTimeField(auto_now_add=True)
+    
+    
+    class Meta:
+        ordering = ['-created_on']
+
+    def __str__(self):
+        return self.name
+    
+class ContaclFormModel(models.Model):
+    name = models.CharField(max_length=400)
+    email = models.EmailField(unique=False)
+    phone = models.CharField(max_length=20)
     created_on = models.DateTimeField(auto_now_add=True)
     
     

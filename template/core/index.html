@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 {% block content %}
     <!-- Slider start -->
     <section class="slider-area" style="background-image: url('./static/img/banner/banner_1.jpg');" data-overlay="9">
@@ -133,11 +134,15 @@
                     Our Services
                   <span class="line after"></span>
                 </h5>
-                        <h1>What We Offer for You</h1>
+                        <h1>What We Offer</h1>
                     </div>
                 </div>
-            
+                <div class="col-lg-5 col-md-12 text-center text-lg-right">
+                    <a href="{% url 'account:services'  %}" class="btn btn-round-border mb-15 mt-md-20">View more</a>
+                </div>
             </div>
+            <div class="row">
+            {% for category in services %}
             <div class="col-lg-4 col-md-6">
                 <div class="service-box type-2 transition-4 text-left relative img-lined mb-30">
                     <div class="service-icon-2 z-5">
@@ -145,14 +150,16 @@
                     </div>
                     <div class="service-text">
                         <h5 class="f-700 mt-18 mb-10">
-                <a href="#">Business Management</a>
+                <a href="#">{{ category.name }}</a>
               </h5>
-                        <p>Quisque enim ipsum, commodo et venenatis rutrum, luctus in enim quisque dapibus...</p>
-                        <a href="#" class="btn btn-round mt-10">Learn More</a>
+                        <p>{{category.details|truncatechars:80 }}</p>
+                        <a href="{% url 'account:service_detail' category.id %}" class="btn btn-round mt-10">Learn More</a>
                     </div>
                 </div>
             </div>
-            </div>
+
+            {% endfor %}
+        </div>
         </div>
     </section>
     <!-- Service end -->
@@ -174,49 +181,27 @@
                   </h5>
                             <h1>Latest News</h1>
                         </div>
+                        {% for blog in blog_posts %}
                         <div class="each-blog pb-25 mb-25 d-flex align-items-center">
                             <div class="blog-date text-center transition-4 bg-light-white mr-30">
-                                <h2 class="day green mb-10 f-700">21</h2>
-                                <p class="month mb-0">JUL</p>
+                                <h2 class="day green mb-10 f-700">{{blog.created_on|date:"d"}}</h2>
+                                <p class="month mb-0">{{blog.created_on|date:"M"}}</p>
                             </div>
                             <div class="blog-text">
                                 <h6>
-                      <a href="blog-details-slider.html" class="f-700">Sollicitudin nibh sit amet commodo nulla facilisi nullam. Vestibulum..</a>
+                      <a href="{% url 'account:blog_detail' blog.id %}" class="f-700">{{blog.title|truncatechars:80}}</a>
                     </h6>
-                                <p class="f-500 mb-0">Admin / Business</p>
+                                <p class="f-500 mb-0">Admin</p>
                             </div>
                         </div>
-                        <div class="each-blog pb-25 mb-25 d-flex align-items-center">
-                            <div class="blog-date text-center transition-4 bg-light-white mr-30">
-                                <h2 class="day green mb-10 f-700">21</h2>
-                                <p class="month mb-0">JUL</p>
-                            </div>
-                            <div class="blog-text">
-                                <h6>
-                      <a href="blog-details-slider.html" class="f-700">Sollicitudin nibh sit amet commodo nulla facilisi nullam. Vestibulum..</a>
-                    </h6>
-                                <p class="f-500 mb-0">Admin / Business</p>
-                            </div>
-                        </div>
-                        <div class="each-blog pb-25 mb-25 d-flex align-items-center">
-                            <div class="blog-date text-center transition-4 bg-light-white mr-30">
-                                <h2 class="day green mb-10 f-700">21</h2>
-                                <p class="month mb-0">JUL</p>
-                            </div>
-                            <div class="blog-text">
-                                <h6>
-                      <a href="blog-details-slider.html" class="f-700">Sollicitudin nibh sit amet commodo nulla facilisi nullam. Vestibulum..</a>
-                    </h6>
-                                <p class="f-500 mb-0">Admin / Business</p>
-                            </div>
-                        </div>
+                      {% endfor %}
                         
                     </div>
                     <!-- Blog section end -->
                 </div>
                 <div class="col-lg-6 mb-md-60 pb-md-60">
                     <!-- subscribe us section start -->
-                    <div class="subscribe h-100 pt-95 pb-100 pl-65 pr-65 pl-xs-25 pr-xs-25 " style="background-image: url('./static/img/bg/bg_newsletter.jpg');" data-overlay="9">
+                    <div class="subscribe h-100 pt-95 pb-100 pl-65 pr-65 pl-xs-25 pr-xs-25 " style="background-image: url('./staticimg/bg/bg_newsletter.jpg');" data-overlay="9">
                         <div class="fancy-head left-al z-10 mb-40">
                             <h5 class="line-head mb-15">
                       Newsletter
@@ -225,17 +210,11 @@
                             <h1>Subscribe Us</h1>
                         </div>
                         <div class="subscribe-cotnent z-10">
-                            <p class="mb-45">Quisque enim ipsum, commodo et venenatis rutrum, luctus in enim. Quisque dapibus lacus non pulvinar lobortis commodo et venenatis.</p>
-                            <form action="#">
-                                <div class="form-group relative mb-30">
-                                    <input type="text" class="form-control input-white" id="name2" placeholder="Name">
-                                    <i class="far fa-user transform-v-center"></i>
-                                </div>
-                                <div class="form-group relative mb-30">
-                                    <input type="email" class="form-control input-white" id="email2" placeholder="Email">
-                                    <i class="far fa-envelope transform-v-center"></i>
-                                </div>
-                                <button class="btn btn-blue uppercase shadow-2">Subscribe
+                            <p class="mb-45">Subscribe to get our monthly news letters on how to recycle and keep Nigeria clean.</p>
+                            <form method="POST" action="">
+                                {% csrf_token %}
+                                {{ form }}
+                                <button class="btn btn-blue uppercase shadow-2" type="submit">Subscribe
                                     <i class="fas fa-long-arrow-alt-right ml-15"></i>
                                 </button>
                             </form>

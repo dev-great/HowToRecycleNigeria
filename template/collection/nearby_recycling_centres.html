@@ -34,198 +34,62 @@
                 </div>
                 <div class="col-lg-5 col-md-12 text-center text-lg-right">
                     <p class="job-found f-500 blue">
-                        <span class="green">33</span> Centers Found
+                        <span class="green">Available</span> Centers Found
                     </p>
                 </div>
             </div>
-            <form action="#" class="search">
+            <form action="{% url 'account:search_result' %}" class="search" method="get">
                 <div class="form-group relative mb-45 ">
-                    <input type="text" class="form-control input-lg input-white shadow-5" id="phone" placeholder="Search for collection (Location, Name, Number)...">
+                    <input type="text" class="form-control input-lg input-white shadow-5" name="q" placeholder="Search for collection (Location, Name, State)...">
                     <i class="fas fa-search transform-v-center"></i>
                 </div>
             </form>
             <div class="row">
+                {% for object in object_list %}
                 <div class="col-lg-6">
                     <div class="job-list d-flex align-items-center justify-content-between">
                         <div class="job-detail">
-                            <p class="green f-500 mb-5">Full Time</p>
-                            <h5 class="f-700 fs-19 mb-5"><a href="#">Product Sales Specialist</a></h5>
+                            
+                            <h5 class="f-700 fs-19 mb-5"><a href="#">{{object.name}}</a></h5>
+                            <p class="green f-500 mb-5">{{object.full_address|truncatechars:45}}</p>
                             <ul class="list-inline fs-12 mb-5">
                                 <li class="list-inline-item pr-15">
-                                    <i class="fas fa-map-marker-alt mr-10 fs-14 green"></i> Brooklyn , NY USA
+                                    <i class="fas fa-map-marker-alt mr-10 fs-14 green"></i>{{object.state}}
                                 </li>
                                 <li class="list-inline-item pr-15">
-                                    <i class="fas fa-dollar-sign mr-10 fs-14 green"></i> $1000 per month</li>
+                                    <i class="fas fa-phone mr-10 fs-14 green"></i>{{object.number}}</li>
                             </ul>
                         </div>
                         <div class="job-apply">
-                            <a href="#" class="plus-btn flex-center">
+                            <a href="{% url 'account:nearby_recycling_centres_detail' object.id %}" class="plus-btn flex-center">
                                 <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6" >
-                    <div class="job-list d-flex align-items-center justify-content-between">
-                        <div class="job-detail">
-                            <p class="green f-500 mb-5">Freelance</p>
-                            <h5 class="f-700 fs-19 mb-5"><a href="#">General Accountant</a></h5>
-                            <ul class="list-inline fs-12 mb-5">
-                                <li class="list-inline-item pr-15">
-                                    <i class="fas fa-map-marker-alt mr-10 fs-14 green"></i> Brooklyn , NY USA
-                                </li>
-                                <li class="list-inline-item pr-15">
-                                    <i class="fas fa-dollar-sign mr-10 fs-14 green"></i> $1000 per month</li>
-                            </ul>
-                        </div>
-                        <div class="job-apply">
-                            <a href="#" class="plus-btn flex-center">
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="job-list d-flex align-items-center justify-content-between">
-                        <div class="job-detail">
-                            <p class="green f-500 mb-5">Internship</p>
-                            <h5 class="f-700 fs-19 mb-5"><a href="#">Finance Manager</a></h5>
-                            <ul class="list-inline fs-12 mb-5">
-                                <li class="list-inline-item pr-15">
-                                    <i class="fas fa-map-marker-alt mr-10 fs-14 green"></i> Brooklyn , NY USA
-                                </li>
-                                <li class="list-inline-item pr-15">
-                                    <i class="fas fa-dollar-sign mr-10 fs-14 green"></i> $1000 per month</li>
-                            </ul>
-                        </div>
-                        <div class="job-apply">
-                            <a href="#" class="plus-btn flex-center">
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="job-list d-flex align-items-center justify-content-between">
-                        <div class="job-detail">
-                            <p class="green f-500 mb-5">Full Time</p>
-                            <h5 class="f-700 fs-19 mb-5"><a href="#">Executive, HR Operations</a></h5>
-                            <ul class="list-inline fs-12 mb-5">
-                                <li class="list-inline-item pr-15">
-                                    <i class="fas fa-map-marker-alt mr-10 fs-14 green"></i> Brooklyn , NY USA
-                                </li>
-                                <li class="list-inline-item pr-15">
-                                    <i class="fas fa-dollar-sign mr-10 fs-14 green"></i> $1000 per month</li>
-                            </ul>
-                        </div>
-                        <div class="job-apply">
-                            <a href="#" class="plus-btn flex-center">
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="job-list d-flex align-items-center justify-content-between">
-                        <div class="job-detail">
-                            <p class="green f-500 mb-5">Full Time</p>
-                            <h5 class="f-700 fs-19 mb-5"><a href="#">Web/UI Designer</a></h5>
-                            <ul class="list-inline fs-12 mb-5">
-                                <li class="list-inline-item pr-15">
-                                    <i class="fas fa-map-marker-alt mr-10 fs-14 green"></i> Brooklyn , NY USA
-                                </li>
-                                <li class="list-inline-item pr-15">
-                                    <i class="fas fa-dollar-sign mr-10 fs-14 green"></i> $1000 per month</li>
-                            </ul>
-                        </div>
-                        <div class="job-apply">
-                            <a href="#" class="plus-btn flex-center">
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="job-list d-flex align-items-center justify-content-between">
-                        <div class="job-detail">
-                            <p class="green f-500 mb-5">Full Time</p>
-                            <h5 class="f-700 fs-19 mb-5"><a href="#">Frontend Developer</a></h5>
-                            <ul class="list-inline fs-12 mb-5">
-                                <li class="list-inline-item pr-15">
-                                    <i class="fas fa-map-marker-alt mr-10 fs-14 green"></i> Brooklyn , NY USA
-                                </li>
-                                <li class="list-inline-item pr-15">
-                                    <i class="fas fa-dollar-sign mr-10 fs-14 green"></i> $1000 per month</li>
-                            </ul>
-                        </div>
-                        <div class="job-apply">
-                            <a href="#" class="plus-btn flex-center">
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="job-list d-flex align-items-center justify-content-between">
-                        <div class="job-detail">
-                            <p class="green f-500 mb-5">Full Time</p>
-                            <h5 class="f-700 fs-19 mb-5"><a href="#">Product Sales Specialist</a></h5>
-                            <ul class="list-inline fs-12 mb-5">
-                                <li class="list-inline-item pr-15">
-                                    <i class="fas fa-map-marker-alt mr-10 fs-14 green"></i> Brooklyn , NY USA
-                                </li>
-                                <li class="list-inline-item pr-15">
-                                    <i class="fas fa-dollar-sign mr-10 fs-14 green"></i> $1000 per month</li>
-                            </ul>
-                        </div>
-                        <div class="job-apply">
-                            <a href="#" class="plus-btn flex-center">
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6" >
-                    <div class="job-list d-flex align-items-center justify-content-between">
-                        <div class="job-detail">
-                            <p class="green f-500 mb-5">Full Time</p>
-                            <h5 class="f-700 fs-19 mb-5"><a href="#">Marketing Manager</a></h5>
-                            <ul class="list-inline fs-12 mb-5">
-                                <li class="list-inline-item pr-15">
-                                    <i class="fas fa-map-marker-alt mr-10 fs-14 green"></i> Brooklyn , NY USA
-                                </li>
-                                <li class="list-inline-item pr-15">
-                                    <i class="fas fa-dollar-sign mr-10 fs-14 green"></i> $1000 per month</li>
-                            </ul>
-                        </div>
-                        <div class="job-apply">
-                            <a href="#" class="plus-btn flex-center">
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
+            
             </div>
-
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="pagination-type1 center-align mt-30">
-                        <ul>
-                            <li>
-                                <a href="#"><i class="fas fa-long-arrow-alt-left"></i></a>
-                            </li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li>
-                                <a href="#"><i class="fas fa-long-arrow-alt-right"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            {% if is_paginated %}
+            <div class="pagination-type1 left-align mb-md-50">
+                <ul>
+                    {% if page_obj.has_previous %}
+                    <li>
+                        <a href="?page={{ page_obj.previous_page_number }}"><i class="fas fa-long-arrow-alt-left"></i></a>
+                    </li>
+                    
+                    {% endif %}
+                    {% for i in paginator.page_range %}
+                    <li><a href="?page={{ i }}">{{ i }}</a></li>
+                    {% endfor %}
+                    {% if page_obj.has_next %}
+                    <li>
+                        <a href="?page={{ page_obj.next_page_number }}"><i class="fas fa-long-arrow-alt-right"></i></a>
+                    </li>
+                     {% endif %}
+                </ul>
             </div>
+            {% endif %}
 
         </div>
     </section>

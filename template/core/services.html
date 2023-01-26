@@ -35,6 +35,8 @@
                     </div>
                 </div>
             </div>
+            <div class="row"> 
+            {% for object in object_list %}
             <div class="col-lg-4 col-md-6">
                 <div class="service-box type-2 transition-4 text-left relative img-lined mb-30">
                     <div class="service-icon-2 z-5">
@@ -42,13 +44,15 @@
                     </div>
                     <div class="service-text">
                         <h4 class="f-700 mt-20 mb-10">
-                <a href="#">Business Management</a>
+                <a href="#">{{ object.name }}</a>
               </h4>
-                        <p>Quisque enim ipsum, commodo et venenatis rutrum, luctus in enim quisque dapibus...</p>
-                        <a href="#" class="btn btn-round mt-10">Learn More</a>
+                        <p>{{object.details|truncatechars:80 }}</p>
+                        <a href="{% url 'account:service_detail' object.id %}" class="btn btn-round mt-10">Learn More</a>
                     </div>
                 </div>
             </div>
+            {% endfor %}
+        </div>
             </div>
         </div>
     </section>

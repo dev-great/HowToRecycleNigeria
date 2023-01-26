@@ -1,6 +1,48 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+        <!-- immer banner start -->
+        <section class="inner-banner pt-80 pb-95" style="background-image: url('../static/img/banner/inner-banner.jpg'); height: 20rem;" data-overlay="7">
+            <div class="container">
+                <div class="row z-5 align-items-center" style="padding: 5rem;">
+                    <div class="col-md-8 text-center text-md-left">
+                        <h1 class="f-700 green white">404</h1>
+                        <span class="green-line bg-green d-none d-md-inline-block"></span>
+                    </div>
+                    <div class="col-md-4 text-center text-md-right">
+                        <nav aria-label="breadcrumb" class="banner-breadcump">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="{% url 'account:home_page' %}"><i class="fas fa-home fs-12 mr-5"></i>Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">404</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-
+        
+    <!-- 404 area start -->
+    <section class="not-found pt-100 pb-100" style="background-image: url('img/bg/bg-abt.jpg');" data-overlay="9">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="area-not-found z-5">
+                        <h1 class="head-404 mb-35 mt-40">
+            4<span class="green">0</span>4
+          </h1>
+                        <h5 class="fs-19 mb-25">We are sorry, But the page you requested was not found</h5>
+                        <form action="#" class="search-not-found">
+                            <div class="form-group relative mb-25 ">
+                                <input type="text" class="form-control input-lg input-white shadow-5" id="phone" placeholder="Search here...">
+                                <i class="fas fa-search transform-v-center"></i>
+                            </div>
+                        </form>
+                        <p class="mb-35">Or go back to <a href="#" class="underline">homepage</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 404 area end -->
 {% endblock content %}

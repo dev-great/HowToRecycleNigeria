@@ -103,33 +103,14 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form action="#" class="relative z-5 mt-10">
+                    <form  method="POST" action="#" class="relative z-5 mt-10">
                         <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group relative mb-30 mb-sm-20">
-                                    <input type="text" class="form-control input-lg input-white shadow-5" id="name" placeholder="Name">
-                                    <i class="far fa-user transform-v-center"></i>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group relative mb-30 mb-sm-20">
-                                    <input type="email" class="form-control input-lg input-white shadow-5" id="email" placeholder="Email">
-                                    <i class="far fa-envelope transform-v-center"></i>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group relative mb-30 mb-sm-20">
-                                    <input type="text" class="form-control input-lg input-white shadow-5" id="phone" placeholder="Phone number">
-                                    <i class="fas fa-mobile-alt transform-v-center"></i>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group relative mb-30 mb-sm-20">
-                                    <textarea class="form-control input-white shadow-5" name="message" id="message" cols="30" rows="7" placeholder="Your message"></textarea>
-                                </div>
-                            </div>
+                                {% csrf_token %}
+                                {{ form }}
+                                
                             <div class="col-lg-12 text-center mt-30">
-                                <a href="#" class="btn btn-round  blob-small">SUBMIT<i class="fas fa-long-arrow-alt-right ml-20"></i></a>
+                                <button class="btn btn-blue uppercase shadow-2" type="submit">SUBMIT<i class="fas fa-long-arrow-alt-right ml-20"></i>
+                                </button>
                             </div>
                         </div>
                     </form>

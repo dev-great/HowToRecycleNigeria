@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-=1k$(ux_%@(^bo^tje!c%75)7rqi7hm-q7g*v0t*+p)yw0g8hp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_METHODS = [
@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     
     # pluggings
     'corsheaders',
+    'crispy_forms',
     
     #installed apps
     'account',
@@ -71,6 +72,7 @@ INSTALLED_APPS = [
 ]
 
 SITE_ID = 1
+CRISPY_TEMPLATE_PACK = 'uni_form'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

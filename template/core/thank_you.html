@@ -1,6 +1,46 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+<section class="inner-banner pt-80 pb-95" style="background-image: url('../static/img/banner/inner-banner.jpg'); height: 20rem;" data-overlay="7">
+    <div class="container">
+        <div class="row z-5 align-items-center" style="padding: 5rem;">
+            <div class="col-md-8 text-center text-md-left">
+                <h1 class="f-700 green white">Thank you</h1>
+                <span class="green-line bg-green d-none d-md-inline-block"></span>
+            </div>
+            <div class="col-md-4 text-center text-md-right">
+                <nav aria-label="breadcrumb" class="banner-breadcump">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="{% url 'account:home_page' %}"><i class="fas fa-home fs-12 mr-5"></i>Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Thank You</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
 
+  <!-- Thank you start -->
+  <section class="thanks pt-100 pb-100" style="background-image: url('img/bg/bg-abt.jpg');" data-overlay="9">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="thank-outer z-5">
+                    <div class="thank-icon flex-center">
+                        <img src="{% static 'img/career/hand.png' %}" alt="">
+                    </div>
+                    <h3 class="f-700">Thank you! We have recieved your contact request.</h3>
+                    <p>We have received your message and would like to thank you. If your inquiry is urgent, please use the telephone number listed above to talk to one of our staff members. 
+
+                        Otherwise, we will reply by email as soon as possible.
+                        
+                        Talk to you soon, How To Recycle Nigeria.</p>
+                    <a href="{% url 'account:home_page' %}" class="btn btn-round mt-10">Go Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Thank you end -->
 
 {% endblock content %}
