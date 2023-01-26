@@ -9,5 +9,4 @@ admin.site.register(ServiceModel, ServiceAdmin)
 
 admin.site.register(BlogModel)
 admin.site.register(NewslettersModel)
-admin.site.register(PricesModel)
 admin.site.register(ContaclFormModel)

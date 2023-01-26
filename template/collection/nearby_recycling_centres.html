@@ -50,7 +50,7 @@
                     <div class="job-list d-flex align-items-center justify-content-between">
                         <div class="job-detail">
                             
-                            <h5 class="f-700 fs-19 mb-5"><a href="#">{{object.name}}</a></h5>
+                            <h5 class="f-700 fs-19 mb-5"><a href="{% url 'account:nearby_recycling_centres_detail' object.id %}" >{{object.name}}</a></h5>
                             <p class="green f-500 mb-5">{{object.full_address|truncatechars:45}}</p>
                             <ul class="list-inline fs-12 mb-5">
                                 <li class="list-inline-item pr-15">

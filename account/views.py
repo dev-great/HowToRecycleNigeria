@@ -8,6 +8,13 @@ from .forms import *
 from django.urls import reverse
 from django.db.models import Q
 from django.shortcuts import render,redirect
+from django.http import FileResponse
+import qrcode 
+from PIL import Image
+import time
+
+def qr_gen(request):
+    return FileResponse(open('./static/qr.png', 'rb'), as_attachment=True)
 
 # Create your views here.
 class Index(CreateView):
@@ -62,6 +69,7 @@ class NearbyRecyclingCentres(ListView):
     paginate_by = 10
     
     
+    
 class NearbyRecyclingCentresSearch(ListView):
     model = CollectionCenterModel
     template_name = 'collection/search_result.html'
@@ -80,9 +88,8 @@ class NearbyRecyclingCentresDetail(DetailView):
 
 class NearbyRecyclingCentresCreate(CreateView):
     model = CollectionCenterModel
-    fields = ['name','number','whats_app','state','google_map_link','full_address','opening_time','closing_time','pricing',]
     template_name = 'collection/nearby_recycling_centres_create.html' 
-    form_class = PostForm
+    form_class = CollectionCenterForm
     success_url = "/thankyou/"
 
 class Services(ListView):

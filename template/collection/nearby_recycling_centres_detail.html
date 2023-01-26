@@ -1,6 +1,92 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+  <!-- immer banner start -->
+  <section class="inner-banner pt-80 pb-95" style="background-image: url('../static/img/banner/inner-banner.jpg'); height: 20rem;" data-overlay="7">
+    <div class="container">
+        <div class="row z-5 align-items-center" style="padding: 5rem;">
+            <div class="col-md-8 text-center text-md-left">
+                <h1 class="f-700 green white">{{object.name|truncatechars:30}}</h1>
+                <span class="green-line bg-green d-none d-md-inline-block"></span>
+            </div>
+            <div class="col-md-4 text-center text-md-right">
+                <nav aria-label="breadcrumb" class="banner-breadcump">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="{% url 'account:home_page' %}"><i class="fas fa-home fs-12 mr-5"></i>Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{{object.name|truncatechars:20}}</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Login area start -->
+<section class="login pt-100 pb-100">
+<div class="container">
+    <div class="row no-gutters">
+        <div class="col-xl-7 col-lg-12 d-lg-block">
+          
 
+                <iframe src="{{object.google_map_link}}", width="1200" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+      
+    </div>
+    <div class="col-12">
+        <div class="hr-2 bg-light-white mt-50 mb-55"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-sm-6 mb-md-35">
+            <div class="case-info">
+                <h5 class="line-right green f-700 fs-19 mb-15">Address</h5>
+                <p class="fs-15 f-500"><i class="fas fa-map-marker-alt mr-10 fs-14 green"></i> {{object.full_address}}</p>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-sm-35">
+            <div class="case-info">
+                <h5 class="line-right green f-700 fs-19 mb-15">Official Hours</h5>
+                <p class="fs-15 f-500"><i class="fas fa-clock mr-10 fs-14 green"></i> Opening Time - <span class="fs-13 f-400">{{object.opening_time}}</span></p>
+                <p class="fs-15 f-500"><i class="fas fa-clock mr-10 fs-14 green"></i> Closing Time - <span class="fs-13 f-400"> {{object.closing_time}}</span></p>
+            </div>
+        </div>
+       
+        <div class="col-lg-3 col-sm-6 mb-sm-35">
+            <div class="case-info">
+                <h5 class="line-right green f-700 fs-19 mb-15">State</h5>
+                <p class="fs-15 f-500"><i class="fas fa-location mr-10 fs-14 green"></i> {{object.state}}</p>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-md-35">
+            <div class="case-info">
+                <h5 class="line-right green f-700 fs-19 mb-15">Number</h5>
+                <p class="fs-15 f-500"><i class="fas fa-phone mr-10 fs-14 green"></i> Phone: {{object.number}}</p>
+                <p class="fs-15 f-500"><i class="fas fa-phone mr-10 fs-14 green"></i> Whatsapp: {{object.whats_app}}</p>
+            </div>
+        </div>
+       
+        <div class="col-12">
+            <div class="hr-2 bg-light-white mt-50 mb-55"></div>
+        </div>
+    </div>
+</div>
+
+</section>
+<!-- Login area end -->
+    <!-- Client logos area start -->
+    <section class="client-list bg-light-white pt-100 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3 text-center">
+                    <div class="how-it-content z-5 mt-5">
+                        <h1 class=" f-700 mt-35 wow fadeInDown">Register your collection center now!</h1>
+                        <p class=" mt-10 mb-40 wow fadeInDown">All clients can add their recycling or collection facility to the list of centers we display on our website.</p>
+                        <a href="{% url 'account:nearby_recycling_centres_create' %}" class="btn btn-round blob-small mb-55 wow fadeInUp">REGISTER NOW!<i class="fas fa-long-arrow-alt-right ml-20"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Client logos area end -->
+    
 
 {% endblock content %}

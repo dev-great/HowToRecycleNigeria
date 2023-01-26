@@ -4,6 +4,7 @@ from .views import *
 app_name = 'account'
 
 urlpatterns = [
+    path('download_qr/', qr_gen, name="download_qr" ),
     path('', Index.as_view(), name="home_page"),
     path('become_an_agent/', BecomeAnAgent.as_view(), name="become_an_agent" ),
     path('faq/', Faq.as_view(), name="faq" ),

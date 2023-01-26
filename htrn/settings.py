@@ -64,6 +64,7 @@ INSTALLED_APPS = [
     # pluggings
     'corsheaders',
     'crispy_forms',
+    'cloudinary',
     
     #installed apps
     'account',
@@ -73,6 +74,13 @@ INSTALLED_APPS = [
 
 SITE_ID = 1
 CRISPY_TEMPLATE_PACK = 'uni_form'
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': '/var/tmp/django_cache',
+    }
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

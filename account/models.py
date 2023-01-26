@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class BecomeAnAgent(models.Model):
@@ -18,7 +19,6 @@ class BecomeAnAgent(models.Model):
     
 class ServiceModel(models.Model):
     name = models.CharField(max_length=400)
-    image = models.ImageField(upload_to='images/')
     details = models.TextField()
     updated_on = models.DateTimeField(auto_now= True)
     created_on = models.DateTimeField(auto_now_add=True)
@@ -29,23 +29,16 @@ class ServiceModel(models.Model):
     def __str__(self):
         return self.name
  
- 
-class PricesModel(models.Model):
-    name = models.CharField(max_length=400)
-    price = models.CharField(max_length=2000)
-        
-    
     
 class CollectionCenterModel(models.Model):
     name = models.CharField(max_length=400)
     number = models.CharField(max_length=15)
     whats_app = models.CharField(max_length=15)
     state = models.CharField(max_length=400)
-    google_map_link = models.CharField(max_length=4000)
+    google_map_link = models.CharField(max_length=4000, blank=True, null=True)
     full_address = models.TextField()
     opening_time = models.CharField(max_length=15)
     closing_time = models.CharField(max_length=15)
-    pricing = models.ManyToManyField(PricesModel)
     updated_on = models.DateTimeField(auto_now= True)
     created_on = models.DateTimeField(auto_now_add=True)
 
@@ -58,7 +51,7 @@ class CollectionCenterModel(models.Model):
 
 class BlogModel(models.Model):
     title= models.CharField(max_length=200)
-    image = models.ImageField(upload_to='images/')
+    image = CloudinaryField('image')
     content= models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     
