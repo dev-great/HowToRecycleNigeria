@@ -2,7 +2,26 @@
 {% load static %}
 {% block content %}
 
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
+<script>
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 0, lng: 0 },
+            zoom: 2
+        });
 
+        var geocodedAddresses = JSON.parse('{{ geocoded_addresses|safe }}');
+        for (var i = 0; i < geocodedAddresses.length; i++) {
+            var address = geocodedAddresses[i];
+            var marker = new google.maps.Marker({
+                position: { lat: address.latitude, lng: address.longitude },
+                map: map,
+                title: address.name
+            });
+        }
+    }
+</script> -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
     <!-- Job listing area start -->
     <section class="job-list-section bg-light-white pt-90 pb-100">
@@ -19,6 +38,29 @@
                     </p>
                 </div>
             </div>
+          
+            <!-- Create a div for the map -->
+            <div id="map" style="height: 400px;"></div>
+        
+            <script>
+                // Initialize the map
+                var map = L.map('map').setView([51.505, -0.09], 13);
+
+                // Add the OSM tile layer
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+
+                var geocodedAddresses = {{ geocoded_addresses| safe }};
+                for (var i = 0; i < geocodedAddresses.length; i++) {
+                    var address = geocodedAddresses[i];
+                    var marker = L.marker([address.latitude, address.longitude]).addTo(map);
+                    marker.bindPopup(address.name).openPopup();
+                }
+            </script>
+    
+    
+            <br>
             <form action="{% url 'account:search_result' %}" class="search" method="get">
                 <div class="form-group relative mb-45 ">
                     <input type="text" class="form-control input-lg input-white shadow-5" name="q" placeholder="Search for collection (Location, Name, State)...">
@@ -73,7 +115,21 @@
             {% endif %}
 
         </div>
+       
     </section>
+
+        <!-- immer banner start -->
+        <section class="inner-banner pt-10 pb-15 bg-light-white"
+            <div class="container">
+                <div class="row z-5 align-items-center" style="padding: 5rem;">
+                    <div class="col text-center">
+                        <a href="/"  class="formbold-btn">Back to Home</a>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+   
     <!-- Job listing area end -->
 
 
