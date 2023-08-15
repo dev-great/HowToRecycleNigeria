@@ -1,4 +1,53 @@
-/* ==========================================================================================
+
+  /* Common styles for both web and mobile */
+  .features-area {
+      margin-top: 5rem;
+  }
+
+  .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .service-box {
+      background-color: #fff;
+      padding: 30px;
+      margin-left: 15px;
+      width: calc(50% - 30px);
+      box-sizing: border-box;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+  }
+
+  .service-text h5 {
+      font-size: 25px;
+      margin-top: 10px;
+      padding-right: 10rem;
+      text-align: start;
+  }
+
+  /* Web-specific styles */
+  @media (max-width: 1200px) {
+    .features-area {
+            margin-top: 3rem;
+        }
+    .service-box h5 {
+            font-size: 15px;
+            text-align: start;
+            padding-right: 0rem;
+            margin-top: 10px;
+        }
+    .service-box {
+        margin-left: 15px;
+        width: calc(60% - 60px);
+        padding: 1px;
+        margin-bottom: 15px;
+    }
+  }
+     /* ==========================================================================================
   Theme Name: Bizz
   Author: VS_THEMES
   Support: visakhinkollam@gmail.com
@@ -1225,7 +1274,7 @@ p.big-p {
 
 .service-box {
     background-color: #fff;
-    padding: 50px 40px;
+    padding: 30px 30px;
 }
 
 .service-icon {
@@ -1292,6 +1341,8 @@ p.big-p {
 .service-box.type-2.img-lined:before {
     border: 1px solid;
     opacity: 1;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     -webkit-transition: all .4s;
     transition: all .4s;
 }
@@ -3266,7 +3317,7 @@ ul li:last-child .icon-round-box-icon {
     font-weight: 900;
     line-height: 1;
 }
-
+ 
 .search-not-found {
     max-width: 440px;
     margin: auto;
