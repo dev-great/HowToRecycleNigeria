@@ -36,37 +36,45 @@
     </div>
 <section class="features-area bg-light-white pt-50 pb-50 pb-xs-00">
     <div class="container ">
-        <div class="service-box type-1">
+         <div class="service-box type-1">
+            <a href="{% url 'account:nearby_recycling_centres' %}">
             <div class="service-icon-2" style="padding-left:0rem; padding-top:1rem;">
                 <img src="{% static 'recycle.png' %}" alt="Recycling Logo" style="margin: auto;">
             </div>
             <div class="service-text">
                 <h5>how do I get to the closest recycling centre</h5>
             </div>
+            </a>
         </div>
-        <div class="service-box type-1">
+       <div class="service-box type-1">
+        <a href="{% url 'account:download_qr' %}">
             <div class="service-icon-2"  style="padding-left:0rem; padding-top:1rem;">
                 <img src="{% static 'recycle.png' %}" alt="Recycling Logo" style="margin: auto;">
             </div>
             <div class="service-text">
                 <h5>Send me a QR code for my products</h5>
             </div>
+            </a>
         </div>
-        <div class="service-box type-1">
+       <div class="service-box type-1">
+        <a href="{% url 'account:become_an_agent' %}">
             <div class="service-icon-2"  style="padding-left:0rem; padding-top:1rem;">
                 <img src="{% static 'recycle.png' %}" alt="Recycling Logo" style="margin: auto;">
             </div>
             <div class="service-text">
                 <h5>How to become an agent</h5>
             </div>
+            </a>
         </div>
         <div class="service-box type-1">
+            <a href="{% url 'account:faq' %}">
             <div class="service-icon-2"  style="padding-left:0rem; padding-top:1rem;">
                 <img src="{% static 'recycle.png' %}" alt="Recycling Logo" style="margin: auto;">
             </div>
             <div class="service-text">
                 <h5>faq’s, recycling at home, etc.</h5>
             </div>
+            </a>
         </div>
     </div>
 </section>

@@ -1,28 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-    <!-- immer banner start -->
-    <section class="inner-banner pt-80 pb-95" style="background-image: url('../static/img/banner/inner-banner.jpg'); height: 20rem;" data-overlay="7">
-        <div class="container">
-            <div class="row z-5 align-items-center" style="padding: 5rem;">
-                <div class="col-md-8 text-center text-md-left">
-                    <h1 class="f-700 green white">Become An Account</h1>
-                    <span class="green-line bg-green d-none d-md-inline-block"></span>
-                </div>
-                <div class="col-md-4 text-center text-md-right">
-                    <nav aria-label="breadcrumb" class="banner-breadcump">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a href="{% url 'account:home_page' %}"><i class="fas fa-home fs-12 mr-5"></i>Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Become An Agent</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </section>
+
  <!-- Login area start -->
  <section class="login pt-100 pb-100">
-    <div class="container">
+    <div class="containerx">
         <div class="row no-gutters">
             <div class="col-xl-7 col-lg-6 d-none d-lg-block">
                 <div class="login-image bg-cover h-100" style="background-image: url('../static/img/bg/login.jpg');">
@@ -48,21 +30,5 @@
 </section>
 <!-- Login area end -->
 
-
-<!-- Client logos area start -->
-<section class="client-list bg-light-white pt-100 pb-70">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 offset-lg-3 text-center">
-                <div class="how-it-content z-5 mt-5">
-                    <h1 class=" f-700 mt-35 wow fadeInDown">Register your collection center now!</h1>
-                    <p class=" mt-10 mb-40 wow fadeInDown">All clients can add their recycling or collection facility to the list of centers we display on our website.</p>
-                    <a href="{% url 'account:nearby_recycling_centres_create' %}" class="btn btn-round blob-small mb-55 wow fadeInUp">REGISTER NOW!<i class="fas fa-long-arrow-alt-right ml-20"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Client logos area end -->
 
 {% endblock content %}

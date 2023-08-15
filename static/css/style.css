@@ -10,6 +10,11 @@
       justify-content: center;
   }
 
+ .containerx {
+    box-sizing: border-box;
+    padding: 5rem;
+    }
+
   .service-box {
       background-color: #fff;
       padding: 30px;
@@ -34,6 +39,10 @@
     .features-area {
             margin-top: 3rem;
         }
+                 .containerx {
+                     box-sizing: border-box;
+                     padding: 1rem;
+                 }
     .service-box h5 {
             font-size: 15px;
             text-align: start;
